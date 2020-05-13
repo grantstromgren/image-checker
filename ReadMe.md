@@ -13,7 +13,7 @@ Although more packages exist to improve functionality, this was kept basic to ma
 - `git clone https://github.com/grantstromgren/image-checker && cd image-checker`
 - `node index.js --help` to view available commands
 
-### Examples
+## Examples
 `node index.js flag anvil-partial.png` - flags the `anvil-partial.png` by storing the base64 string into a newly created 
 `store.db` file.
 
