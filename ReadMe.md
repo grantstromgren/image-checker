@@ -10,7 +10,7 @@ Although more packages exist to improve functionality, this was kept basic to ma
 - Node
 
 ## Setup
-- `git clone https://github.com/grantstromgren/image-checker && cd image-checker`
+- `git clone git@github.com/grantstromgren/image-checker && cd image-checker`
 - `node index.js --help` to view available commands
 
 ## Examples
