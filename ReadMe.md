@@ -14,7 +14,7 @@ Although more packages exist to improve functionality, this was kept basic to ma
 - `node index.js --help` to view available commands
 
 ## Examples
-`node index.js flag anvil-partial.png` - flags the `anvil-partial.png` by storing the base64 string into a newly created 
+`node index.js flag images/anvil-partial.png` - flags the `images/anvil-partial.png` by storing the base64 string into a newly created 
 `store.db` file.
 
 `node index.js check images` - checks all images in directory against `store.db`
