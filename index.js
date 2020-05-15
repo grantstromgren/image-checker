@@ -1,6 +1,8 @@
 /**
  * Disclaimer: This is a coding sample that I created but also can be a useful tool. Feel free to use it, but know that
  * storing images in a database will ultimately be much more performant than within a single file.
+ *
+ * For help, run `node index.js --help`
  */
 
 const fs = require('fs');
@@ -201,10 +203,12 @@ function store(file, data) {
  * @param level The level of log to be recorded. Affects text at the start of the log message.
  * @param err If an err exists with the log, enter it here, it will only display err if it exists
  */
-function log(message, level = 0, err = '') {
-    let logMessage = logLevels[level] + ' ' + message;
+function log(message, level = 0, err = null) {
+    let logMessage = `${logLevels[level]} ${message}`;
 
-    err != '' && logMessage + '\n' + err;
+    if (err) {
+        logMessage = `${logMessage}\n${err}`
+    }
 
     try {
         console.info(logMessage);
@@ -221,11 +225,7 @@ function log(message, level = 0, err = '') {
  * @param err An error response to be dumped out
  */
 function exit(message, level = 0, err = null) {
-    log(message, level);
-
-    if (err) {
-        log('', 2, err)
-    }
+    log(message, level, err);
 
     log('Exiting...', 0);
     process.exit(1);
